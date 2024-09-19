@@ -1,0 +1,139 @@
+{
+    "queryCost": 1,
+    "latitude": 47.131,
+    "longitude": 24.4899,
+    "resolvedAddress": "Bistrița, România",
+    "address": "bistrita",
+    "timezone": "Europe/Bucharest",
+    "tzoffset": 3,
+    "days": [
+     {
+      "datetime": "2024-09-19",
+      "datetimeEpoch": 1726693200,
+      "tempmax": 18,
+      "tempmin": 7.5,
+      "temp": 12.6,
+      "feelslikemax": 18,
+      "feelslikemin": 7.5,
+      "feelslike": 12.6,
+      "dew": 9.1,
+      "humidity": 79.9,
+      "precip": 0.9,
+      "precipprob": 100,
+      "precipcover": 20.83,
+      "preciptype": [
+       "rain"
+      ],
+      "snow": 0,
+      "snowdepth": 0,
+      "windgust": 27,
+      "windspeed": 8.4,
+      "winddir": 18.7,
+      "pressure": 1021.8,
+      "cloudcover": 75,
+      "visibility": 15.4,
+      "solarradiation": 69.9,
+      "solarenergy": 6.1,
+      "uvindex": 4,
+      "severerisk": 10,
+      "sunrise": "07:05:14",
+      "sunriseEpoch": 1726718714,
+      "sunset": "19:25:25",
+      "sunsetEpoch": 1726763125,
+      "moonphase": 0.54,
+      "conditions": "Rain, Partially cloudy",
+      "description": "Partly cloudy throughout the day with morning rain.",
+      "icon": "rain",
+      "stations": [
+       "LRCL",
+       "LRTM"
+      ],
+      "source": "comb",
+      "hours": [
+       {
+        "datetime": "12:00:00",
+        "datetimeEpoch": 1726736400,
+        "temp": 18,
+        "feelslike": 18,
+        "humidity": 61.46,
+        "dew": 10.4,
+        "precip": 0.5,
+        "precipprob": 0,
+        "snow": 0,
+        "snowdepth": 0,
+        "preciptype": [
+         "rain"
+        ],
+        "windgust": 25.2,
+        "windspeed": 8.4,
+        "winddir": 141,
+        "pressure": 1021,
+        "visibility": 10,
+        "cloudcover": 88,
+        "solarradiation": 202,
+        "solarenergy": 0.7,
+        "uvindex": 2,
+        "severerisk": 10,
+        "conditions": "Partially cloudy",
+        "icon": "partly-cloudy-day",
+        "stations": [
+         "LRCL",
+         "LRTM"
+        ],
+        "source": "obs"
+       },
+       {
+        "datetime": "13:00:00",
+        "datetimeEpoch": 1726740000,
+        "temp": 15.3,
+        "feelslike": 15.3,
+        "humidity": 69.24,
+        "dew": 9.7,
+        "precip": 0.1,
+        "precipprob": 19.4,
+        "snow": 0,
+        "snowdepth": 0,
+        "preciptype": [
+         "rain"
+        ],
+        "windgust": 18.7,
+        "windspeed": 8.3,
+        "winddir": 36.4,
+        "pressure": 1022,
+        "visibility": 22.5,
+        "cloudcover": 99.5,
+        "solarradiation": 93,
+        "solarenergy": 0.3,
+        "uvindex": 1,
+        "severerisk": 10,
+        "conditions": "Overcast",
+        "icon": "cloudy",
+        "stations": null,
+        "source": "fcst"
+       }
+      ]
+     }
+    ],
+    "stations": {
+     "LRCL": {
+      "distance": 72895,
+      "latitude": 46.78,
+      "longitude": 23.68,
+      "useCount": 0,
+      "id": "LRCL",
+      "name": "LRCL",
+      "quality": 50,
+      "contribution": 0
+     },
+     "LRTM": {
+      "distance": 73775,
+      "latitude": 46.47,
+      "longitude": 24.42,
+      "useCount": 0,
+      "id": "LRTM",
+      "name": "LRTM",
+      "quality": 50,
+      "contribution": 0
+     }
+    }
+   }
