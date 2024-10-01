@@ -2,13 +2,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="stylesheet" href="style.css">
-    <title>Hangzhou weather app</title>
+    <title>Weather app</title>
 </head>
 <body>
-    <p>Hello</p>
-    
-
+    <div id="container">
+        <div id="search-container">
+            <input type="text" name="location" id="location-input" required minlength="3">
+            <button id="load-weather">find</button>
+        </div>
+    </div>
+    <div id="modal">
+        <img src="./weather-icons/bouncing-ball.svg" alt="Bouncing ball loading animation" id="bouncing-ball">
+    </div>
     <script src="index.js"></script>
+    <!-- <script src="layout.js"></script> -->
 </body>
 </html>
