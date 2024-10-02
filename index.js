@@ -26,24 +26,24 @@ function dayNameFromDate(dateString) {
 
 
 async function getWeatherData(requestString) { // returns response.days 
-    let response = await fetch(requestString)
-    if(response.ok) {
+    let response = await fetch(requestString)    
+    if(response.status == 200) {
         let weatherDays = await response.json();
         return weatherDays;
     }
-    if(response.status === "400") {
+    if(response.status === 400) {
         throw new Error("Something wrong happened");
     }
-    if(response.status === "401") {
+    if(response.status === 401) {
         throw new Error("Not authorised for this type of request. Sorry!");
     }
-    if(response.status === "404") {
+    if(response.status === 404) {
         throw new Error("Wow, you got a 404 error, impressive!");
     }
-    if(response.status === "429") {
+    if(response.status === 429) {
         throw new Error("Unfortunately, my account exceeded the assigned limit.");
     }
-    if(response.status === "500") {
+    if(response.status === 500) {
         throw new Error("Internal server error.");
     }
 }
@@ -51,11 +51,6 @@ async function getWeatherData(requestString) { // returns response.days
 const launchApiCall = document.getElementById("load-weather")
 
 let currentArray = [];
-
-// launchApiCall.addEventListener("click", () => {
-//     displaySpinner();
-//     container.classList.add("blur")
-// })
 
 const locationInput = document.getElementById("location-input")
 const myForm = document.getElementById("my-form")
@@ -72,7 +67,9 @@ launchApiCall.addEventListener("click", () => {
         location = location.replace("^[,]", '%2C')
         let requestString = request + location + '/' + getDateFormat(currentDate) + '/' + getDateFormat(lastDate) + "?unitGroup=metric&key=T9CSJA4PGGK33YTJKDPRJR82D"
         getWeatherData(requestString)
-        .then(res => {
+        .then((res) => {
+            console.log(res);
+            
             currentArray = res.days;
             lastClass = currentArray[0].icon;
             clearWeatherLayout();
@@ -95,7 +92,7 @@ launchApiCall.addEventListener("click", () => {
             alert(error + "\n" + "Be sure to check for typos and make sure you're typing a real location.")
             document.getElementById("location-input").value = '';
             container.classList.remove("blur")
-            stopSpinner();
+            stopSpinner(); 
         })
     }
 })
@@ -170,11 +167,6 @@ function clearWeatherLayout() {
         container.removeChild(container.lastChild);
     }
 }
-
-{/* <div id="search-container">
-            <input type="text" name="location" id="location-input">
-            <button id="load-weather">find</button>
-        </div> */}
 
 function createWeatherLayout() {
     const weatherBody = document.createElement("div")
